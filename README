@@ -1,13 +1,13 @@
 jsAutoBind
 
 Why:
-One day when I was manually wiring up element events to functions in JavaScript I thought, why can’t a convention based light-weighted framework do this for me? And if it can, can it also handle state changes from JavaScript into the UI? So here it is; a first draft of something that maybe will be this framework. 
+One day when I was manually wiring up element events to functions in JavaScript I thought, why can't a convention based light-weighted framework do this for me? And if it can, can it also handle state changes from JavaScript into the UI? So here it is; a first draft of something that maybe will be this framework. 
 
 What it is not:
 The framework is not complete nor have been tested I different browsers. The code may or may not be production ready, I haven’t have time for benchmarks yet. 
 
 What you can do with it and how:
-You can create a “behavior model” (in JavaScript) that has the bindings that you are interested of. For example; if you want to bind a button to a click event you just write the name of the button in the behavior model as an function and it will automatically be bind to the element. The behavior model has to have the same name as the page and with the suffix “Behavior” added to it. If you want to control if the button is enabled or not you can add a variable that starts with “can” and then the button name, e.g. canSave. If the variable canSave is true the button will be enabled. Whenever the variable state change the buttons UI state will change with it (e.g. if you change state to false the button will automatically be disabled in the UI). 
+You can create a "behavior model" (in JavaScript) that has the bindings that you are interested of. For example; if you want to bind a button to a click event you just write the name of the button in the behavior model as an function and it will automatically be bind to the element. The behavior model has to have the same name as the page and with the suffix "Behavior" added to it. If you want to control if the button is enabled or not you can add a variable that starts with "can" and then the button name, e.g. canSave. If the variable canSave is true the button will be enabled. Whenever the variable state change the buttons UI state will change with it (e.g. if you change state to false the button will automatically be disabled in the UI). 
 
 Conventions:
 The idea is to use conversions for different element types, e.g. for buttons we use the click-event and for selects we use the changed event. 
