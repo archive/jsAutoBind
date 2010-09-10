@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>sample 3</title>
+    </head>
+    <body>
+        <form>
+            <div id="first-context">
+                Type: 
+                <select name="top-type" id="top-type">
+                    <option value="-1" selected="selected"></option>
+                    <option value="1">Type 1</option>
+                    <option value="2">Type 2</option>
+                    <option value="3">Type 3</option>
+                </select>
+                <select name="sub-type" id="sub-type">
+                </select>
+                <br/>
+                <input name="save" id="save" type="button" value="Save">
+                <br/>
+            </div>
+            <div id="second-context">
+            </div>
+        </form>
+    </body>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+    <script src="sample.js" type="text/javascript">
+    </script>
+    <script src="../lib/jsAutoBind.js" type="text/javascript">
+    </script>
+    <script src="../lib/jsAutoBind-debug-window.js" type="text/javascript">
+    </script>
+    <script src="../lib/jsAutoBind-jQuery.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        jsab.context = "first-context";
+        jsab.behavior = firstContextBehavior;
+        jsab.bind();
+    </script>
+</html>
