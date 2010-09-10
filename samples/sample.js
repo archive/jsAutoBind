@@ -1,4 +1,3 @@
-
 var sample1Behavior = {
 	
     save: function(){
